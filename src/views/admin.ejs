@@ -24,33 +24,38 @@
 </head>
 
 <body>
-    <h2>Them du lieu</h2>
-    <form action="/submit" method="post">
-        <div class="form-group">
-            <label for="name">Ten:</label>
-            <input type="text" class="form-control" id="name" name="name">
+    <div class="container" style="padding: 0px 30px; margin-top: 20px">
+        <div class="title" style="background-color: #cecece; padding: 10px 30px">
+            <h1>Thêm dữ liệu</h1>
+            <hr />
         </div>
-        <div class="form-group">
-            <label for="gt">GioiTinh:</label>
-            <input type="text" class="form-control" id="gt" name="gt">
-        </div>
-        <div class="form-group">
-            <label for="tuoi">Tuoi:</label>
-            <input type="text" class="form-control" id="tuoi" name="tuoi">
-        </div>
-        <div class="form-group">
-            <label for="diemtoan">DiemToan:</label>
-            <input type="text" class="form-control" id="diemtoan" name="diemtoan">
-        </div>
-        <div class="form-group">
-            <label for="diemly">DiemLy:</label>
-            <input type="text" class="form-control" id="diemly" name="diemly">
-        </div>
-        <div class="form-group">
-            <label for="diemhoa">DiemHoa:</label>
-            <input type="text" class="form-control" id="diemhoa" name="diemhoa">
-            <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="ten">Ten:</label>
+                <input type="text" class="form-control" id="ten" name="ten">
+            </div>
+            <div class="form-group">
+                <label for="gt">GioiTinh:</label>
+                <input type="text" class="form-control" id="gt" name="gt">
+            </div>
+            <div class="form-group">
+                <label for="tuoi">Tuoi:</label>
+                <input type="text" class="form-control" id="tuoi" name="tuoi">
+            </div>
+            <div class="form-group">
+                <label for="diemtoan">DiemToan:</label>
+                <input type="text" class="form-control" id="diemtoan" name="diemtoan">
+            </div>
+            <div class="form-group">
+                <label for="diemly">DiemLy:</label>
+                <input type="text" class="form-control" id="diemly" name="diemly">
+            </div>
+            <div class="form-group">
+                <label for="diemhoa">DiemHoa:</label>
+                <input type="text" class="form-control" id="diemhoa" name="diemhoa">
+                <button type="submit" class="btn btn-default">Submit</button>
+        </form>
 </body>
 
 </html>

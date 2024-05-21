@@ -12,7 +12,6 @@
     <div class="container" style="padding: 0px 30px; margin-top: 20px">
         <div class="title" style="background-color: #cecece; padding: 10px 30px">
             <h1>Xem dữ liệu</h1>
-            <p>Vào Mongodb</p>
             <hr />
         </div>
 
@@ -28,25 +27,25 @@
                 </tr>
             </thead>
             <tbody>
-                <% data.forEach(function(item, index) { %>
+                <% data.forEach(function(data, index) { %>
                     <tr>
                         <td>
-                            <%= item.name %>
+                            <%= data.ten %>
                         </td>
                         <td>
-                            <%= item.gioitinh %>
+                            <%= data.gioitinh %>
                         </td>
                         <td>
-                            <%= item.tuoi %>
+                            <%= data.tuoi %>
                         </td>
                         <td>
-                            <%= item.diemToan %>
+                            <%= data.diemtoan %>
                         </td>
                         <td>
-                            <%= item.diemLy %>
+                            <%= data.diemly %>
                         </td>
                         <td>
-                            <%= item.diemHoa %>
+                            <%= data.diemhoa %>
                         </td>
                     </tr>
                     <% }); %>

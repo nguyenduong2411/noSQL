@@ -1,35 +1,33 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-//const ProductController = require('../controller/product.controller')
-//router.use('/api/v1/product', require('./product'));
-const ProductModel = require('../models/product.model');
+const StudentModel = require('../models/product.model');
 
 router.get('/', async(req, res) => {
-    res.render('views/index');
+    res.render('admin');
 });
 router.post('/submit', (req, res) => {
     const data = req.body || {}
     try {
-        ProductModel.insertMany({
-            ten: data.name,
+        StudentModel.insertMany({
+            ten: data.ten,
             gioitinh: data.gioitinh,
             tuoi: data.tuoi,
-            diemToan: data.toan,
-            diemLy: data.ly,
-            diemHoa: data.hoa,
+            diemtoan: data.diemtoan,
+            diemly: data.diemly,
+            diemhoa: data.diemhoa,
         })
     } catch (e) {
         throw new Error("Missing")
     } finally {
-        res.redirect("/admin")
+        res.redirect("/view")
     }
 })
 
 router.get('/view', async(req, res) => {
     try {
-        const data = await ProductModel.find().exec();
-        res.render('views/index', { data });
+        const data = await StudentModel.find().exec();
+        res.render('view', { data });
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).send('Internal server error');
